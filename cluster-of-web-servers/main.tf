@@ -9,7 +9,7 @@
 # ------------------------------------------------------------------------------
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-2"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -47,8 +47,8 @@ resource "aws_autoscaling_group" "example" {
 # ---------------------------------------------------------------------------------------------------------------------
 
 resource "aws_launch_configuration" "example" {
-  # Ubuntu Server 14.04 LTS (HVM), SSD Volume Type in us-east-1
-  image_id = "ami-2d39803a"
+  # Ubuntu Server 14.04 LTS (HVM), SSD Volume Type in eu-west-2
+  image_id = "ami-000f01dff848bb217"
   instance_type = "t2.micro"
   security_groups = ["${aws_security_group.instance.id}"]
 
